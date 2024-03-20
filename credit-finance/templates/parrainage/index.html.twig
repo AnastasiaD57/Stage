@@ -1,0 +1,92 @@
+{% extends 'bootstrap.html.twig' %}
+
+{% block body %}
+
+<div class="container text-center bg-light py-5" style="border: solid; border-radius: 15px; border-color: #33cccc">
+    <h1 class="display-6 fw-bold pt-3" style= "color: #33cccc" > PARRAINEZ UN DE VOS PROCHES </h1>
+    <h2 style= "color: #33cccc; text-decoration: underline ">Recevez 500€!</h2>
+
+    {{ form_start(form) }}
+    <div class="row justify-content-evenly py-5">
+        <div class="col-3">
+            <div class="card">
+                <div class="card-header fw-bold" style="background: #BDBDBD">
+                PARRAIN
+                </div>
+                <img src="images/mamie.jpg" alt="mamie" style="height:200px; object-fit:cover">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center justify-content-between pb-3">
+                        <div class="col-auto">
+                            {{ form_label(form.NomParrain, 'Nom', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.NomParrain, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center justify-content-between pb-3">
+                        <div class="col-auto">
+                            {{ form_label(form.MailParrain, 'Mail', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.MailParrain, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            {{ form_label(form.TelParrain, 'n° Tel', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.TelParrain, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="card" style="border-color: #33cccc">
+                <div class="card-header fw-bold" style="background: #BDBDBD; border-color: #33cccc">
+                FILLEUL
+                </div>
+                <img src="images/cadeau.jpg" alt="mamie" style="height:200px; object-fit:cover">
+                <div class="card-body">
+                    <div class="row g-3 align-items-center justify-content-between pb-3">
+                        <div class="col-auto">
+                            {{ form_label(form.NomFilleul, 'Nom', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.NomFilleul, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center justify-content-between pb-3">
+                        <div class="col-auto">
+                            {{ form_label(form.MailFilleul, 'Mail', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.MailFilleul, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="row g-3 align-items-center justify-content-between">
+                        <div class="col-auto">
+                            {{ form_label(form.TelFilleul, 'n° Tel', { 'label_attr': {'class': 'form-label'} }) }}
+                        </div>
+                        <div class="col-auto">
+                            {{ form_widget(form.TelFilleul, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn-custom mb-4">Envoyer</button>
+
+    {{ form_end(form) }}
+
+</div>
+
+{% endblock %}
